@@ -62,6 +62,17 @@ public class Principal extends javax.swing.JFrame {
         jTF_Descuento1 = new javax.swing.JTextField();
         Guardar2 = new javax.swing.JButton();
         jCB_Producto = new javax.swing.JComboBox<>();
+        jD_Eliminar_Producto = new javax.swing.JDialog();
+        jLabel18 = new javax.swing.JLabel();
+        jCB_Producto1 = new javax.swing.JComboBox<>();
+        Guardar3 = new javax.swing.JButton();
+        jD_Compra = new javax.swing.JDialog();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jCB_Compra_Cliente = new javax.swing.JComboBox<>();
+        jCB_Compra_Producto = new javax.swing.JComboBox<>();
+        jButton3 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -361,6 +372,103 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(46, 46, 46))
         );
 
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel18.setText("Eliminar Producto");
+
+        Guardar3.setText("Guardar");
+        Guardar3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Guardar3MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jD_Eliminar_ProductoLayout = new javax.swing.GroupLayout(jD_Eliminar_Producto.getContentPane());
+        jD_Eliminar_Producto.getContentPane().setLayout(jD_Eliminar_ProductoLayout);
+        jD_Eliminar_ProductoLayout.setHorizontalGroup(
+            jD_Eliminar_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jD_Eliminar_ProductoLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(Guardar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(37, 37, 37))
+            .addGroup(jD_Eliminar_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jD_Eliminar_ProductoLayout.createSequentialGroup()
+                    .addContainerGap(46, Short.MAX_VALUE)
+                    .addComponent(jLabel18)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jCB_Producto1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(34, 34, 34)))
+        );
+        jD_Eliminar_ProductoLayout.setVerticalGroup(
+            jD_Eliminar_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jD_Eliminar_ProductoLayout.createSequentialGroup()
+                .addContainerGap(196, Short.MAX_VALUE)
+                .addComponent(Guardar3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61))
+            .addGroup(jD_Eliminar_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jD_Eliminar_ProductoLayout.createSequentialGroup()
+                    .addGap(28, 28, 28)
+                    .addGroup(jD_Eliminar_ProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jD_Eliminar_ProductoLayout.createSequentialGroup()
+                            .addComponent(jCB_Producto1, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                            .addGap(1, 1, 1))
+                        .addComponent(jLabel18))
+                    .addGap(242, 242, 242)))
+        );
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel19.setText("Compra");
+
+        jLabel20.setText("Cliente:");
+
+        jLabel21.setText("Producto:");
+
+        jButton3.setText("Compra");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jD_CompraLayout = new javax.swing.GroupLayout(jD_Compra.getContentPane());
+        jD_Compra.getContentPane().setLayout(jD_CompraLayout);
+        jD_CompraLayout.setHorizontalGroup(
+            jD_CompraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jD_CompraLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addGroup(jD_CompraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jD_CompraLayout.createSequentialGroup()
+                        .addGroup(jD_CompraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jD_CompraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel20)
+                                .addComponent(jLabel19))
+                            .addGroup(jD_CompraLayout.createSequentialGroup()
+                                .addGap(56, 56, 56)
+                                .addComponent(jLabel21)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jD_CompraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCB_Compra_Producto, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCB_Compra_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(149, Short.MAX_VALUE))
+        );
+        jD_CompraLayout.setVerticalGroup(
+            jD_CompraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jD_CompraLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel19)
+                .addGap(27, 27, 27)
+                .addGroup(jD_CompraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(jCB_Compra_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jD_CompraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(jCB_Compra_Producto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(69, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jMenu1.setText("Administrador");
@@ -401,6 +509,11 @@ public class Principal extends javax.swing.JFrame {
         jMenu3.add(jMenuItem6);
 
         jMenuItem7.setText("Eliminar Producto");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem7);
 
         jMenu1.add(jMenu3);
@@ -416,7 +529,7 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("Cliente");
 
         jMenuItem8.setText("Comprar Producto");
         jMenu2.add(jMenuItem8);
@@ -470,7 +583,10 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
+        jD_Modificar_Producto.setModal(true);
+        jD_Modificar_Producto.pack();
+        jD_Modificar_Producto.setLocationRelativeTo(this);
+        jD_Modificar_Producto.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void GuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarMouseClicked
@@ -478,6 +594,7 @@ public class Principal extends javax.swing.JFrame {
         DefaultComboBoxModel modelo = (DefaultComboBoxModel)jCB_Cliente.getModel();
         modelo.addElement(c);
         jCB_Cliente.setModel(modelo);
+        jCB_Compra_Cliente.setModel(modelo);
         JOptionPane.showMessageDialog(jD_Eliminar_Cliente, "Cliente Creado");
         jTF_Nombre.setText("");
         jTF_Edad.setText("");
@@ -487,6 +604,7 @@ public class Principal extends javax.swing.JFrame {
         DefaultComboBoxModel modelo = (DefaultComboBoxModel)jCB_Cliente.getModel();
         modelo.removeElementAt(jCB_Cliente.getSelectedIndex());
         jCB_Cliente.setModel(modelo);
+        jCB_Compra_Cliente.setModel(modelo);
         JOptionPane.showMessageDialog(jD_Eliminar_Cliente, "Cliente Eliminado");
     }//GEN-LAST:event_jButton2MouseClicked
 
@@ -495,6 +613,8 @@ public class Principal extends javax.swing.JFrame {
         DefaultComboBoxModel modelo = (DefaultComboBoxModel)jCB_Producto.getModel();
         modelo.addElement(p);
         jCB_Producto.setModel(modelo);
+        jCB_Producto1.setModel(modelo);
+        jCB_Compra_Producto.setModel(modelo);
         JOptionPane.showMessageDialog(jD_Crear_Producto, "Producto Creado");
         jTF_Nombre_Producto.setText("");
         jTF_Categoria.setText("");
@@ -513,7 +633,7 @@ public class Principal extends javax.swing.JFrame {
         String nombre = "", categoria = "";
         double precio = 0, descuento = 0;
         int toc = 0, toc_d = 0;
-        nombre = jTF_Nombre_Producto.getText();
+        nombre = jTF_Nombre_Producto1.getText();
         categoria = jTF_Categoria1.getText();
         precio = Double.parseDouble(jTF_Precio1.getText());
         descuento = Double.parseDouble(jTF_Descuento1.getText());
@@ -539,14 +659,41 @@ public class Principal extends javax.swing.JFrame {
         }
         Producto p =new Producto(nombre, categoria, precio, descuento);
         DefaultComboBoxModel modelo = (DefaultComboBoxModel)jCB_Producto.getModel();
+        modelo.removeElementAt(jCB_Producto.getSelectedIndex());
         modelo.addElement(p);
         jCB_Producto.setModel(modelo);
+        jCB_Producto1.setModel(modelo);
+        jCB_Compra_Producto.setModel(modelo);
         JOptionPane.showMessageDialog(jD_Crear_Producto, "Producto Modificado");
-        jTF_Nombre_Producto.setText("");
-        jTF_Categoria.setText("");
-        jTF_Precio.setText("");
-        jTF_Descuento.setText("");
+        jTF_Nombre_Producto1.setText("");
+        jTF_Categoria1.setText("");
+        jTF_Precio1.setText("");
+        jTF_Descuento1.setText("");
     }//GEN-LAST:event_Guardar2MouseClicked
+
+    private void Guardar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Guardar3MouseClicked
+        DefaultComboBoxModel modelo = (DefaultComboBoxModel)jCB_Producto1.getModel();
+        modelo.removeElementAt(jCB_Producto1.getSelectedIndex());
+        jCB_Producto.setModel(modelo);
+        jCB_Producto1.setModel(modelo);
+        jCB_Compra_Producto.setModel(modelo);
+        JOptionPane.showMessageDialog(jD_Eliminar_Producto, "Producto Eliminado");
+    }//GEN-LAST:event_Guardar3MouseClicked
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        jD_Eliminar_Producto.setModal(true);
+        jD_Eliminar_Producto.pack();
+        jD_Eliminar_Producto.setLocationRelativeTo(this);
+        jD_Eliminar_Producto.setVisible(true);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+       ((Cliente)jCB_Compra_Cliente.getModel()).getProductos().add((Producto)jCB_Compra_Producto.getModel().getSelectedItem());
+       DefaultComboBoxModel modelo = (DefaultComboBoxModel)jCB_Compra_Producto.getModel();
+       modelo.removeElementAt(jCB_Compra_Producto.getSelectedIndex());
+       jCB_Compra_Producto.setModel(modelo);
+       JOptionPane.showMessageDialog(jD_Compra, "Compra Exitosa");
+    }//GEN-LAST:event_jButton3MouseClicked
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -583,13 +730,20 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton Guardar;
     private javax.swing.JButton Guardar1;
     private javax.swing.JButton Guardar2;
+    private javax.swing.JButton Guardar3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jCB_Cliente;
+    private javax.swing.JComboBox<String> jCB_Compra_Cliente;
+    private javax.swing.JComboBox<Producto> jCB_Compra_Producto;
     private javax.swing.JComboBox<String> jCB_Producto;
+    private javax.swing.JComboBox<String> jCB_Producto1;
+    private javax.swing.JDialog jD_Compra;
     private javax.swing.JDialog jD_Crear_Cliente;
     private javax.swing.JDialog jD_Crear_Producto;
     private javax.swing.JDialog jD_Eliminar_Cliente;
+    private javax.swing.JDialog jD_Eliminar_Producto;
     private javax.swing.JDialog jD_LogIn;
     private javax.swing.JDialog jD_Modificar_Producto;
     private javax.swing.JLabel jLabel1;
@@ -601,7 +755,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
