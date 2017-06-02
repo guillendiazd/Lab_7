@@ -82,9 +82,11 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Administrador");
@@ -483,10 +485,20 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuItem2.setText("Crear Cliente");
         jMenuItem2.setEnabled(false);
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem2);
 
         jMenuItem5.setText("Eliminar Cliente");
         jMenuItem5.setEnabled(false);
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem5);
 
         jMenu3.setText("Producto");
@@ -518,6 +530,10 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu1.add(jMenu3);
 
+        jMenuItem10.setText("Inventario");
+        jMenuItem10.setEnabled(false);
+        jMenu1.add(jMenuItem10);
+
         jMenuItem4.setText("LogOut");
         jMenuItem4.setEnabled(false);
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -532,7 +548,15 @@ public class Principal extends javax.swing.JFrame {
         jMenu2.setText("Cliente");
 
         jMenuItem8.setText("Comprar Producto");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem8);
+
+        jMenuItem9.setText("jMenuItem9");
+        jMenu2.add(jMenuItem9);
 
         jMenuBar1.add(jMenu2);
 
@@ -565,6 +589,7 @@ public class Principal extends javax.swing.JFrame {
             jMenuItem2.setEnabled(true);
             jMenuItem4.setEnabled(true);
             jMenuItem5.setEnabled(true);
+            jMenuItem10.setEnabled(true);
             jMenu3.setEnabled(true);
             JOptionPane.showMessageDialog(jD_LogIn, "Usuario Ingresado");
             jD_LogIn.setVisible(false);
@@ -578,6 +603,7 @@ public class Principal extends javax.swing.JFrame {
             jMenuItem2.setEnabled(false);
             jMenuItem4.setEnabled(false);
             jMenuItem5.setEnabled(false);
+            jMenuItem10.setEnabled(false);
             jMenu3.setEnabled(false);
             JOptionPane.showMessageDialog(this, "Se ha Cerrado sesión");
     }//GEN-LAST:event_jMenuItem4ActionPerformed
@@ -688,12 +714,36 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-       ((Cliente)jCB_Compra_Cliente.getModel()).getProductos().add((Producto)jCB_Compra_Producto.getModel().getSelectedItem());
-       DefaultComboBoxModel modelo = (DefaultComboBoxModel)jCB_Compra_Producto.getModel();
-       modelo.removeElementAt(jCB_Compra_Producto.getSelectedIndex());
-       jCB_Compra_Producto.setModel(modelo);
-       JOptionPane.showMessageDialog(jD_Compra, "Compra Exitosa");
+        ((Cliente)jCB_Compra_Cliente.getModel().getSelectedItem()).getProductos().add((Producto)jCB_Compra_Producto.getModel().getSelectedItem());
+        DefaultComboBoxModel modelo = (DefaultComboBoxModel)jCB_Compra_Producto.getModel();
+        modelo.removeElementAt(jCB_Compra_Producto.getSelectedIndex());
+        jCB_Compra_Producto.setModel(modelo);
+        descuento = ((Producto)jCB_Compra_Producto.getModel().getSelectedItem()).getPrecio() * ((Producto)jCB_Compra_Producto.getModel().getSelectedItem()).getDescuento();
+        total_precio = ((Producto)jCB_Compra_Producto.getModel().getSelectedItem()).getPrecio() - descuento;
+        ganancias += total_precio;
+        JOptionPane.showMessageDialog(jD_Compra, "Compra Exitosa");
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        jD_Crear_Cliente.setModal(true);
+        jD_Crear_Cliente.pack();
+        jD_Crear_Cliente.setLocationRelativeTo(this);
+        jD_Crear_Cliente.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        jD_Eliminar_Cliente.setModal(true);
+        jD_Eliminar_Cliente.pack();
+        jD_Eliminar_Cliente.setLocationRelativeTo(this);
+        jD_Eliminar_Cliente.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        jD_Compra.setModal(true);
+        jD_Compra.pack();
+        jD_Compra.setLocationRelativeTo(this);
+        jD_Compra.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -772,6 +822,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -779,6 +830,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JTextField jTF_Categoria;
     private javax.swing.JTextField jTF_Categoria1;
     private javax.swing.JTextField jTF_Descuento;
@@ -794,4 +846,7 @@ public class Principal extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     private String user = "usuario";
     private String pass = "12345hola";
+    private double ganancias = 0;
+    private double total_precio = 0;
+    private double descuento = 0;
 }
